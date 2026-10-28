@@ -1,0 +1,25 @@
+# Binarios y salidas locales
+bin
+dist
+*.exe
+*.test
+*.out
+coverage.*
+
+# Dependencias vendorizadas: quita esta línea si compilas con -mod=vendor
+vendor
+
+.git
+.github
+.vscode
+.idea
+*.md
+
+.env
+.env.*
+!.env.example
+
+Dockerfile*
+docker-compose*.yml
+compose*.yml
+.dockerignore
