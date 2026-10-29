@@ -1,0 +1,28 @@
+# Dependencias: se instalan dentro de la imagen
+node_modules
+npm-debug.log*
+
+# Salidas de build locales (se generan dentro de la imagen)
+dist
+build
+coverage
+.nyc_output
+
+# Git y herramientas
+.git
+.gitignore
+.github
+.vscode
+.idea
+*.md
+
+# Secretos y configuración local: NUNCA dentro de la imagen
+.env
+.env.*
+!.env.example
+
+# Archivos de Docker (no se necesitan dentro de la imagen)
+Dockerfile*
+docker-compose*.yml
+compose*.yml
+.dockerignore

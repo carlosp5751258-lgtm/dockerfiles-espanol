@@ -1,18 +1,34 @@
-# Dockerfile multi-stage para Go (comentado en español)
+# Dockerfiles optimizados en español (gratis)
 
-Imagen distroless, usuario no root, caché de BuildKit y compilación cruzada amd64/arm64.
+Dockerfiles multi-stage, sin root y comentados en español: imágenes pequeñas y builds rápidos.
 
-## Uso
+**Gratis y de código abierto (MIT).** Úsalo en tus proyectos y en los de tus clientes.
 
-Copia `go/Dockerfile` y `go/.dockerignore` a la raíz de tu proyecto Go y ejecuta `docker build -t mi-servicio .`
+## Qué incluye
 
-## ¿Quieres el pack completo?
+- `go/`: Dockerfile distroless multi-arquitectura
+- `node-express/`: alpine, tini y healthcheck sin curl
+- `.dockerignore` para cada uno
 
-Esta es una **muestra gratuita**. El pack completo está en
-**[Pack Dockerfiles Optimizados (Node, Next.js, FastAPI, Go + docker-compose con Postgres y Redis)](https://claudecodees.gumroad.com/l/dockerfiles-optimizados)**: paga lo que quieras, desde 2 USD.
+## Instalación
 
-📝 Tutorial paso a paso en español: https://dev.to/carlosp5751258lgtm/dockerfile-multi-stage-para-go-de-800-mb-a-menos-de-20-mb-32mc
+```bash
+git clone https://github.com/carlosp5751258-lgtm/dockerfiles-espanol.git
+cp dockerfiles-espanol/node-express/Dockerfile dockerfiles-espanol/node-express/.dockerignore .   # o go/
+docker build -t mi-app .
+```
 
-Más recursos gratis: [claude-code-es](https://github.com/carlosp5751258-lgtm/claude-code-es)
 
-Licencia MIT (solo esta muestra).
+
+## ¿Quieres la versión completa?
+
+Esta es la versión gratis y funciona sola. La **versión Pro** añade:
+
+- Next.js con salida standalone y Python/FastAPI (uv y pip)
+- Go con imagen `scratch`
+- docker-compose con app + PostgreSQL + Redis y healthchecks
+
+👉 [Ver la versión Pro](https://claudecodees.gumroad.com/l/dockerfiles-optimizados) · paga lo que quieras desde 2 USD. Comprarla también ayuda a que sigamos publicando recursos gratis.
+
+---
+Parte de **[Ctrl+IA](https://carlosp5751258-lgtm.github.io/ctrlia/)**: recursos en español para programar con IA. Hecho por Carlos P.
